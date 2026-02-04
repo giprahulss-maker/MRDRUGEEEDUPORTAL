@@ -2,134 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name=google-site-verification=qfcqeDjp7uFnniWOOrJ6rSPC6XaduZ4IoOzMMDO8yDM/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PharmaNotes India | Professional Pharmacy Teaching Platform</title>
+  <title>Drugee | Pharmacy Notes Platform</title>
+  <meta name="description" content="Drugee – Pharmacy notes for B.Pharm and D.Pharm students across India. Unit-wise, exam-oriented notes." />
+
   <style>
-    body { font-family: 'Segoe UI', Arial, sans-serif; margin:0; background:#f4f6fb; color:#333; }
-    header { background:#0b3c5d; color:#fff; padding:18px 30px; display:flex; justify-content:space-between; align-items:center; }
-    header h1 { margin:0; font-size:26px; }
-    nav a { color:#fff; margin-left:18px; text-decoration:none; font-weight:600; }
-    nav a:hover { text-decoration:underline; }
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; background:#f6f6f6; color:#222; }
 
-    .hero { background:linear-gradient(120deg,#e6f0ff,#f9fbff); padding:50px 20px; text-align:center; }
-    .hero h2 { font-size:34px; margin-bottom:10px; color:#0b3c5d; }
-    .hero p { font-size:18px; max-width:800px; margin:auto; }
+    /* Header */
+    header { background:#ffffff; border-bottom:1px solid #ddd; }
+    .topbar { max-width:1200px; margin:auto; padding:20px; }
+    .site-title { font-size:28px; font-weight:700; margin:0; }
+    .tagline { font-size:14px; color:#666; }
 
-    .search-box { margin-top:25px; }
-    .search-box input { width:60%; max-width:420px; padding:12px; border-radius:8px; border:1px solid #ccc; }
+    /* Navigation */
+    nav { background:#222; }
+    nav ul { list-style:none; margin:0; padding:0; display:flex; max-width:1200px; margin:auto; }
+    nav ul li { margin:0; }
+    nav ul li a { display:block; padding:14px 18px; color:#fff; text-decoration:none; font-size:15px; }
+    nav ul li a:hover { background:#444; }
 
-    .container { max-width:1200px; margin:auto; padding:40px 20px; }
-    h2.section-title { color:#0b3c5d; margin-bottom:25px; }
+    /* Layout */
+    .container { max-width:1200px; margin:auto; padding:25px; display:grid; grid-template-columns:3fr 1fr; gap:30px; }
 
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; }
-    .card { background:#fff; padding:22px; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.08); }
-    .card h3 { margin-top:0; color:#0b3c5d; }
-    .card ul { padding-left:18px; }
-    .card ul li { margin-bottom:6px; }
+    /* Main content */
+    .post { background:#fff; padding:22px; margin-bottom:25px; border-radius:4px; box-shadow:0 1px 4px rgba(0,0,0,0.08); }
+    .post h2 { margin-top:0; font-size:22px; }
+    .post p { line-height:1.6; }
+    .read-more { color:#0066cc; text-decoration:none; font-weight:600; }
 
-    .badge { display:inline-block; background:#0b3c5d; color:#fff; padding:4px 10px; border-radius:20px; font-size:12px; margin-bottom:10px; }
+    /* Sidebar */
+    .sidebar { background:#fff; padding:20px; border-radius:4px; box-shadow:0 1px 4px rgba(0,0,0,0.08); }
+    .sidebar h3 { margin-top:0; border-bottom:1px solid #ddd; padding-bottom:8px; }
+    .sidebar ul { list-style:none; padding-left:0; }
+    .sidebar ul li { margin-bottom:10px; }
+    .sidebar ul li a { text-decoration:none; color:#0066cc; }
 
-    footer { background:#0b3c5d; color:#fff; text-align:center; padding:18px; }
-    footer p { margin:5px 0; }
+    /* Footer */
+    footer { background:#222; color:#fff; text-align:center; padding:20px; margin-top:40px; }
 
-    @media(max-width:768px){
-      .search-box input { width:90%; }
-      header { flex-direction:column; align-items:flex-start; }
-      nav { margin-top:10px; }
+    @media(max-width:900px){
+      .container { grid-template-columns:1fr; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>PharmaNotes India</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#courses">Courses</a>
-    <a href="#subjects">Subjects</a>
-    <a href="#practicals">Practicals</a>
-    <a href="#about">About</a>
-  </nav>
+  <div class="topbar">
+    <h1 class="site-title">Drugee</h1>
+    <div class="tagline">Pharmacy Notes & Study Material</div>
+  </div>
 </header>
 
-<section class="hero">
-  <h2>Professional Pharmacy Teaching Platform</h2>
-  <p>Exam-oriented, unit-wise pharmacy notes designed for B.Pharm & D.Pharm students across India.</p>
-  <div class="search-box">
-    <input type="text" placeholder="Search subject, unit, topic…" />
-  </div>
-</section>
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Pharmacy Notes</a></li>
+    <li><a href="#">B.Pharm</a></li>
+    <li><a href="#">D.Pharm</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
 
-<section class="container" id="courses">
-  <h2 class="section-title">Courses</h2>
-  <div class="grid">
-    <div class="card">
-      <span class="badge">UG</span>
-      <h3>B.Pharm</h3>
-      <p>Semester-wise notes strictly aligned with Indian university syllabi.</p>
-    </div>
-    <div class="card">
-      <span class="badge">Diploma</span>
-      <h3>D.Pharm</h3>
-      <p>Concept-based and exam-focused notes for diploma students.</p>
-    </div>
-  </div>
-</section>
+<div class="container">
 
-<section class="container" id="subjects">
-  <h2 class="section-title">Core Subjects</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Pharmaceutics</h3>
-      <ul>
-        <li>Unit-wise theory</li>
-        <li>Diagrams & flowcharts</li>
-        <li>Short notes & MCQs</li>
-      </ul>
+  <!-- Main Content -->
+  <main>
+    <div class="post">
+      <h2>Welcome to Drugee</h2>
+      <p>Drugee is an educational platform created to support pharmacy students with easy-to-understand, exam-oriented notes. All notes are prepared as per Indian university syllabus.</p>
+      <a href="#" class="read-more">Read More →</a>
     </div>
-    <div class="card">
-      <h3>Pharmacology</h3>
-      <ul>
-        <li>Drug classification</li>
-        <li>Mechanism of action</li>
-        <li>Animal experiment models</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Pharmaceutical Chemistry</h3>
-      <ul>
-        <li>Medicinal chemistry</li>
-        <li>Synthesis & SAR</li>
-        <li>Reaction mechanisms</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Microbiology</h3>
-      <ul>
-        <li>Sterilization methods</li>
-        <li>Culture & staining</li>
-        <li>Immunology basics</li>
-      </ul>
-    </div>
-  </div>
-</section>
 
-<section class="container" id="practicals">
-  <h2 class="section-title">Practical Files & Records</h2>
-  <p>Standard practical files, viva questions, and university-ready formats (PDF).</p>
-</section>
+    <div class="post">
+      <h2>Pharmacology Notes – B.Pharm</h2>
+      <p>Unit-wise pharmacology notes covering drug classification, mechanism of action, therapeutic uses, and adverse effects.</p>
+      <a href="#" class="read-more">Read More →</a>
+    </div>
 
-<section class="container" id="about">
-  <h2 class="section-title">About the Educator</h2>
-  <p>This platform is developed by a pharmacy educator with a focus on clarity, conceptual understanding, and exam success for Indian pharmacy students.</p>
-</section>
+    <div class="post">
+      <h2>Pharmaceutics Notes – D.Pharm</h2>
+      <p>Simple and concise pharmaceutics notes focusing on dosage forms, formulations, and pharmaceutical calculations.</p>
+      <a href="#" class="read-more">Read More →</a>
+    </div>
+  </main>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h3>Categories</h3>
+    <ul>
+      <li><a href="#">Pharmacology</a></li>
+      <li><a href="#">Pharmaceutics</a></li>
+      <li><a href="#">Pharmaceutical Chemistry</a></li>
+      <li><a href="#">Microbiology</a></li>
+    </ul>
+
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="#">Latest Notes</a></li>
+      <li><a href="#">PDF Downloads</a></li>
+      <li><a href="#">Practical Files</a></li>
+    </ul>
+  </aside>
+
+</div>
 
 <footer>
-  <p>© 2026 PharmaNotes India</p>
-  <p>Made for Pharmacy Students | Indian Syllabus Focused</p>
+  <p>© 2026 Drugee | Pharmacy Notes Platform</p>
 </footer>
 
 </body>
 </html>
-
