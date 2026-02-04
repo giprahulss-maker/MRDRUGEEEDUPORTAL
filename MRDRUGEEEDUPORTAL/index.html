@@ -1,112 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Drugee | Pharmacy Notes Platform</title>
-  <meta name="description" content="Drugee – Pharmacy notes for B.Pharm and D.Pharm students across India. Unit-wise, exam-oriented notes." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Drugee – Pharmacy notes, PCI syllabus, PDFs, lab manuals for B.Pharm, D.Pharm, M.Pharm students across India.">
 
   <style>
-    body { margin:0; font-family: Arial, Helvetica, sans-serif; background:#f6f6f6; color:#222; }
-
-    /* Header */
-    header { background:#ffffff; border-bottom:1px solid #ddd; }
-    .topbar { max-width:1200px; margin:auto; padding:20px; }
-    .site-title { font-size:28px; font-weight:700; margin:0; }
-    .tagline { font-size:14px; color:#666; }
-
-    /* Navigation */
-    nav { background:#222; }
-    nav ul { list-style:none; margin:0; padding:0; display:flex; max-width:1200px; margin:auto; }
-    nav ul li { margin:0; }
-    nav ul li a { display:block; padding:14px 18px; color:#fff; text-decoration:none; font-size:15px; }
-    nav ul li a:hover { background:#444; }
-
-    /* Layout */
-    .container { max-width:1200px; margin:auto; padding:25px; display:grid; grid-template-columns:3fr 1fr; gap:30px; }
-
-    /* Main content */
-    .post { background:#fff; padding:22px; margin-bottom:25px; border-radius:4px; box-shadow:0 1px 4px rgba(0,0,0,0.08); }
-    .post h2 { margin-top:0; font-size:22px; }
-    .post p { line-height:1.6; }
-    .read-more { color:#0066cc; text-decoration:none; font-weight:600; }
-
-    /* Sidebar */
-    .sidebar { background:#fff; padding:20px; border-radius:4px; box-shadow:0 1px 4px rgba(0,0,0,0.08); }
-    .sidebar h3 { margin-top:0; border-bottom:1px solid #ddd; padding-bottom:8px; }
-    .sidebar ul { list-style:none; padding-left:0; }
-    .sidebar ul li { margin-bottom:10px; }
-    .sidebar ul li a { text-decoration:none; color:#0066cc; }
-
-    /* Footer */
-    footer { background:#222; color:#fff; text-align:center; padding:20px; margin-top:40px; }
-
-    @media(max-width:900px){
-      .container { grid-template-columns:1fr; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f6f6;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+    header p {
+      margin: 5px 0 0;
+      color: #666;
+    }
+    nav {
+      background: #222;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 18px;
+      display: block;
+    }
+    nav ul li a:hover {
+      background: #444;
+    }
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+      background: #fff;
+      margin-top: 20px;
+      border-radius: 4px;
+    }
+    .center {
+      text-align: center;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    .buttons a {
+      display: inline-block;
+      margin: 8px;
+      padding: 12px 18px;
+      background: #222;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .buttons a:hover {
+      background: #444;
+    }
+    .toc ol {
+      max-width: 500px;
+      margin: auto;
+      text-align: left;
+    }
+    iframe {
+      max-width: 100%;
+    }
+    form input {
+      padding: 10px;
+      width: 250px;
+      max-width: 80%;
+    }
+    form button {
+      padding: 10px 16px;
+      background: #222;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <div class="topbar">
-    <h1 class="site-title">Drugee</h1>
-    <div class="tagline">Pharmacy Notes & Study Material</div>
-  </div>
+  <h1>Drugee</h1>
+  <p>Pharmacy Notes & Study Material</p>
 </header>
 
 <nav>
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Pharmacy Notes</a></li>
-    <li><a href="#">B.Pharm</a></li>
-    <li><a href="#">D.Pharm</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="#pci-syllabus">PCI Syllabus</a></li>
+    <li><a href="#notes">Notes</a></li>
+    <li><a href="#youtube">YouTube</a></li>
+    <li><a href="#download-notes">Downloads</a></li>
+    <li><a href="#lab-manuals">Lab Manuals</a></li>
+    <li><a href="#subscribe">Subscribe</a></li>
   </ul>
 </nav>
 
-<div class="container">
+<div class="section center">
+  <p><strong>“Teaching today, transforming tomorrow — one formulation at a time.”</strong></p>
+</div>
 
-  <!-- Main Content -->
-  <main>
-    <div class="post">
-      <h2>Welcome to Drugee</h2>
-      <p>Drugee is an educational platform created to support pharmacy students with easy-to-understand, exam-oriented notes. All notes are prepared as per Indian university syllabus.</p>
-      <a href="#" class="read-more">Read More →</a>
-    </div>
+<div class="section toc">
+  <ol>
+    <li><a href="#pci-syllabus">PCI Syllabus</a></li>
+    <li><a href="#notes">Notes</a></li>
+    <li><a href="#youtube">My YouTube Channel</a></li>
+    <li><a href="#download-notes">Download Notes</a></li>
+    <li><a href="#lab-manuals">Lab Manuals</a></li>
+    <li><a href="#recent-trends">Recent Trends</a></li>
+    <li><a href="#subscribe">Subscribe</a></li>
+  </ol>
+</div>
 
-    <div class="post">
-      <h2>Pharmacology Notes – B.Pharm</h2>
-      <p>Unit-wise pharmacology notes covering drug classification, mechanism of action, therapeutic uses, and adverse effects.</p>
-      <a href="#" class="read-more">Read More →</a>
-    </div>
+<div class="section center" id="pci-syllabus">
+  <h2>PCI Syllabus</h2>
+  <p><strong>Download syllabus 👇</strong></p>
+  <div class="buttons">
+    <a href="https://pci.gov.in/documents/1281/Syllabus_M_Pharm_MTZZgGl.pdf" target="_blank">M. Pharm (PCI)</a>
+    <a href="https://pci.gov.in/documents/1277/Syllabus_B_Pharm_Y4DhvIW.pdf" target="_blank">B. Pharm (PCI)</a>
+    <a href="https://www.pci.nic.in/pdf/14-55_ER_20%20_syllabus_23092021.pdf" target="_blank">D. Pharm (PCI)</a>
+    <a href="https://pci.gov.in/documents/1265/PharmD_regu_2008_ktXB7Zo_m43ifcd.pdf" target="_blank">Pharm. D (PCI)</a>
+  </div>
+</div>
 
-    <div class="post">
-      <h2>Pharmaceutics Notes – D.Pharm</h2>
-      <p>Simple and concise pharmaceutics notes focusing on dosage forms, formulations, and pharmaceutical calculations.</p>
-      <a href="#" class="read-more">Read More →</a>
-    </div>
-  </main>
+<div class="section center" id="notes">
+  <h2>Notes</h2>
+  <p><strong>Select your course 👇</strong></p>
+  <div class="buttons">
+    <a href="#">M. Pharm (Onboarding)</a>
+    <a href="#">B. Pharm (Publishing Soon)</a>
+    <a href="#">D. Pharm (Onboarding)</a>
+    <a href="#">Pharm. D (Publishing Soon)</a>
+  </div>
+</div>
 
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <h3>Categories</h3>
-    <ul>
-      <li><a href="#">Pharmacology</a></li>
-      <li><a href="#">Pharmaceutics</a></li>
-      <li><a href="#">Pharmaceutical Chemistry</a></li>
-      <li><a href="#">Microbiology</a></li>
-    </ul>
+<div class="section center" id="youtube">
+  <h2>My YouTube Channel</h2>
+  <p><strong>Subscribe for video lectures</strong></p>
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/ehsoqX8hwlc"
+    title="YouTube video"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
 
-    <h3>Quick Links</h3>
-    <ul>
-      <li><a href="#">Latest Notes</a></li>
-      <li><a href="#">PDF Downloads</a></li>
-      <li><a href="#">Practical Files</a></li>
-    </ul>
-  </aside>
+<div class="section center" id="download-notes">
+  <h2>Download Notes</h2>
+  <div class="buttons">
+    <a href="https://drugee.wordpress.com/pdfs/" target="_blank">Previously Published</a>
+    <a href="#">M. Pharm (Soon)</a>
+    <a href="#">B. Pharm (Soon)</a>
+    <a href="#">D. Pharm (Ongoing)</a>
+    <a href="#">Pharm. D (Soon)</a>
+  </div>
+</div>
 
+<div class="section center" id="lab-manuals">
+  <h2>Lab Manuals (Practical PDFs)</h2>
+  <div class="buttons">
+    <a href="#">M. Pharm</a>
+    <a href="#">B. Pharm</a>
+    <a href="#">D. Pharm</a>
+    <a href="#">Pharm. D</a>
+  </div>
+</div>
+
+<div class="section" id="recent-trends">
+  <h2>Recent Trends</h2>
+  <p><strong>
+    Welcome to a world of limitless possibilities in pharmaceutical sciences,
+    where learning, innovation, and growth never stop.
+  </strong></p>
+</div>
+
+<div class="section center" id="subscribe">
+  <h2>Subscribe</h2>
+  <p>Enter your email to receive updates</p>
+  <form>
+    <input type="email" placeholder="Your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
 </div>
 
 <footer>
