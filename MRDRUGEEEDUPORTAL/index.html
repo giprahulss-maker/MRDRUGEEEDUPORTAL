@@ -1,22 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Pharmacy Notes</title>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PharmaNotes India | Professional Pharmacy Teaching Platform</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin:0; background:#f4f6fb; color:#333; }
+    header { background:#0b3c5d; color:#fff; padding:18px 30px; display:flex; justify-content:space-between; align-items:center; }
+    header h1 { margin:0; font-size:26px; }
+    nav a { color:#fff; margin-left:18px; text-decoration:none; font-weight:600; }
+    nav a:hover { text-decoration:underline; }
+
+    .hero { background:linear-gradient(120deg,#e6f0ff,#f9fbff); padding:50px 20px; text-align:center; }
+    .hero h2 { font-size:34px; margin-bottom:10px; color:#0b3c5d; }
+    .hero p { font-size:18px; max-width:800px; margin:auto; }
+
+    .search-box { margin-top:25px; }
+    .search-box input { width:60%; max-width:420px; padding:12px; border-radius:8px; border:1px solid #ccc; }
+
+    .container { max-width:1200px; margin:auto; padding:40px 20px; }
+    h2.section-title { color:#0b3c5d; margin-bottom:25px; }
+
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; }
+    .card { background:#fff; padding:22px; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.08); }
+    .card h3 { margin-top:0; color:#0b3c5d; }
+    .card ul { padding-left:18px; }
+    .card ul li { margin-bottom:6px; }
+
+    .badge { display:inline-block; background:#0b3c5d; color:#fff; padding:4px 10px; border-radius:20px; font-size:12px; margin-bottom:10px; }
+
+    footer { background:#0b3c5d; color:#fff; text-align:center; padding:18px; }
+    footer p { margin:5px 0; }
+
+    @media(max-width:768px){
+      .search-box input { width:90%; }
+      header { flex-direction:column; align-items:flex-start; }
+      nav { margin-top:10px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Pharmacy Notes</h1>
-  <p>Free notes for B.Pharm & D.Pharm students</p>
 
-  <h2>Subjects</h2>
-  <ul>
-    <li>Pharmaceutical Chemistry</li>
-    <li>Pharmacology</li>
-    <li>Pharmaceutics</li>
-    <li>Pharmacognosy</li>
-    <li>Microbiology</li>
-  </ul>
+<header>
+  <h1>PharmaNotes India</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#subjects">Subjects</a>
+    <a href="#practicals">Practicals</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
 
-  <p>© 2026 | Educational Purpose Only</p>
+<section class="hero">
+  <h2>Professional Pharmacy Teaching Platform</h2>
+  <p>Exam-oriented, unit-wise pharmacy notes designed for B.Pharm & D.Pharm students across India.</p>
+  <div class="search-box">
+    <input type="text" placeholder="Search subject, unit, topic…" />
+  </div>
+</section>
+
+<section class="container" id="courses">
+  <h2 class="section-title">Courses</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="badge">UG</span>
+      <h3>B.Pharm</h3>
+      <p>Semester-wise notes strictly aligned with Indian university syllabi.</p>
+    </div>
+    <div class="card">
+      <span class="badge">Diploma</span>
+      <h3>D.Pharm</h3>
+      <p>Concept-based and exam-focused notes for diploma students.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="subjects">
+  <h2 class="section-title">Core Subjects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Pharmaceutics</h3>
+      <ul>
+        <li>Unit-wise theory</li>
+        <li>Diagrams & flowcharts</li>
+        <li>Short notes & MCQs</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Pharmacology</h3>
+      <ul>
+        <li>Drug classification</li>
+        <li>Mechanism of action</li>
+        <li>Animal experiment models</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Pharmaceutical Chemistry</h3>
+      <ul>
+        <li>Medicinal chemistry</li>
+        <li>Synthesis & SAR</li>
+        <li>Reaction mechanisms</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Microbiology</h3>
+      <ul>
+        <li>Sterilization methods</li>
+        <li>Culture & staining</li>
+        <li>Immunology basics</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="practicals">
+  <h2 class="section-title">Practical Files & Records</h2>
+  <p>Standard practical files, viva questions, and university-ready formats (PDF).</p>
+</section>
+
+<section class="container" id="about">
+  <h2 class="section-title">About the Educator</h2>
+  <p>This platform is developed by a pharmacy educator with a focus on clarity, conceptual understanding, and exam success for Indian pharmacy students.</p>
+</section>
+
+<footer>
+  <p>© 2026 PharmaNotes India</p>
+  <p>Made for Pharmacy Students | Indian Syllabus Focused</p>
+</footer>
+
 </body>
 </html>
