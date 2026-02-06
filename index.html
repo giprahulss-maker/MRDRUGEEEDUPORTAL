@@ -1,218 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Digital Pharmacy University | Drugee</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Digital Pharmacy University</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    :root {
-      --primary: #0f3d5e;
-      --accent: #1fa2a6;
-      --bg: #f9fafb;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-    }
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    /* Header */
-    header {
-      padding: 48px 22px 24px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    header h1 {
-      font-size: 36px;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    header p {
-      font-size: 16px;
-      color: var(--muted);
-    }
-
-    /* Navigation */
-    nav {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-top: 18px;
-    }
-
-    nav a {
-      font-size: 15px;
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    /* Search */
-    .search-box {
-      margin: 26px 0;
-    }
-
-    .search-box input {
-      width: 100%;
-      max-width: 420px;
-      padding: 14px 16px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      font-size: 15px;
-    }
-
-    /* Section */
-    .section {
-      max-width: 1100px;
-      margin: 28px auto;
-      padding: 26px 22px;
-    }
-
-    .section h2 {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-
-    /* Cards */
-    .card {
-      background: var(--card);
-      padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.04);
-      margin-bottom: 18px;
-    }
-
-    /* Feature list */
-    .features li {
-      list-style: none;
-      font-size: 17px;
-      margin: 10px 0;
-    }
-
-    /* Buttons */
-    .buttons {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .buttons a {
-      text-align: center;
-      padding: 14px 16px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 8px 20px rgba(31,162,166,0.25);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .buttons a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(31,162,166,0.35);
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 30px;
-      }
-    }
-  </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
 
-<header>
-  <h1>Digital Pharmacy University</h1>
-  <p>Free • Trusted • Pharmacy-Only Learning Platform</p>
-
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Courses</a>
-    <a href="#">Notes</a>
-    <a href="#">Practicals</a>
-    <a href="#">Animations</a>
-    <a href="#">Exams</a>
-    <a href="#">About</a>
-  </nav>
-
-  <div class="search-box">
-    <input type="text" placeholder="Search drug, subject, semester…">
-  </div>
+<!-- HEADER / HERO -->
+<header class="main-header">
+    <h1>Digital Pharmacy University</h1>
+    <p>Free • Trusted • Pharmacy-Only Learning Platform</p>
+    <a href="#courses" class="primary-btn">Start Learning →</a>
 </header>
 
-<section class="section">
-  <h2>Mission</h2>
-  <div class="card">
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-left">
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#notes">Notes</a>
+        <a href="#practicals">Practicals</a>
+        <a href="#animations">Animations</a>
+        <a href="#exams">Exams</a>
+        <a href="#about">About</a>
+    </div>
+    <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+</nav>
+
+<!-- SEARCH -->
+<section class="search-section">
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Search drug, subject, semester, exam…">
+</section>
+
+<!-- HOME / MISSION -->
+<section id="home" class="section">
+    <h2>Mission</h2>
     <p>
-      Education without barriers. A single trusted platform for
-      <strong>D.Pharm, B.Pharm, M.Pharm & Pharm.D</strong> students.
+        Education without barriers. A single trusted platform for
+        D.Pharm, B.Pharm, M.Pharm & Pharm.D students — built for clarity,
+        exams, and real understanding.
     </p>
-  </div>
 
-  <ul class="features">
-    <li>📘 Notes</li>
-    <li>🧪 Practicals</li>
-    <li>🎥 Animations</li>
-    <li>📝 Exams</li>
-  </ul>
+    <div class="cards">
+        <div class="card">📘 Notes</div>
+        <div class="card">🧪 Practicals</div>
+        <div class="card">🎥 Animations</div>
+        <div class="card">📝 Exams</div>
+    </div>
 </section>
 
-<section class="section">
-  <h2>Courses</h2>
-  <div class="card">
-    <ul>
-      <li><strong>D.Pharm</strong> – Year 1 & 2</li>
-      <li><strong>B.Pharm</strong> – Semester 1 to 8</li>
-      <li><strong>M.Pharm</strong> – All Specializations</li>
-      <li><strong>Pharm.D</strong> – Academic + Internship</li>
-    </ul>
-  </div>
+<!-- COURSES -->
+<section id="courses" class="section">
+    <h2>Courses</h2>
+
+    <div class="content-box">
+        <ul>
+            <li><strong>D.Pharm</strong> – Year 1 & Year 2</li>
+            <li><strong>B.Pharm</strong> – Semester 1 to 8</li>
+            <li><strong>M.Pharm</strong> – All Specializations</li>
+            <li><strong>Pharm.D</strong> – Academic + Internship</li>
+        </ul>
+    </div>
 </section>
 
-<section class="section">
-  <h2>Quick Access</h2>
-  <div class="buttons">
-    <a href="#">Notes</a>
-    <a href="#">Practicals</a>
-    <a href="#">Animations</a>
-    <a href="#">Exams</a>
-    <a href="#">PCI Syllabus</a>
-  </div>
+<!-- NOTES -->
+<section id="notes" class="section">
+    <h2>Notes & Study Material</h2>
+    <p>
+        Unit-wise, PCI-aligned, exam-oriented pharmacy notes written in
+        simple language with tables, flowcharts, and mnemonics.
+    </p>
+
+    <div class="content-box">
+        <strong>Example Subjects</strong>
+        <ul>
+            <li>Pharmacology</li>
+            <li>Pharmaceutics</li>
+            <li>Pharmaceutical Chemistry</li>
+            <li>Pharmacognosy</li>
+        </ul>
+    </div>
 </section>
 
+<!-- PRACTICALS -->
+<section id="practicals" class="section">
+    <h2>Practicals & Lab Manuals</h2>
+    <p>
+        Experiment-wise procedures, viva questions, diagrams, and examiner tips
+        for confident practical exams.
+    </p>
+
+    <div class="content-box">
+        <strong>Includes:</strong>
+        <ul>
+            <li>Pharmacology animal models</li>
+            <li>Pharmaceutics dosage forms</li>
+            <li>Chemistry synthesis & assays</li>
+            <li>Microbiology techniques</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ANIMATIONS -->
+<section id="animations" class="section">
+    <h2>Visual Learning</h2>
+    <p>
+        Animated drug mechanisms, physiology interactions, and
+        pharmaceutical manufacturing processes for deep conceptual clarity.
+    </p>
+
+    <div class="content-box">
+        🎥 Mechanism of Action animations (coming step-by-step)
+    </div>
+</section>
+
+<!-- EXAMS -->
+<section id="exams" class="section">
+    <h2>Exam Preparation</h2>
+
+    <div class="content-box">
+        <ul>
+            <li>GPAT – MCQs with explanations</li>
+            <li>NIPER – Concept-based preparation</li>
+            <li>University Exams – Important questions & PYQs</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h2>About & Trust</h2>
+    <p>
+        This platform follows the PCI syllabus and is designed by educators
+        for pharmacy students.
+    </p>
+    <p><strong>Always free. No ads. No paywalls.</strong></p>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  © 2026 Drugee • Digital Pharmacy University
+    <p>© Digital Pharmacy University • Education Without Barriers</p>
 </footer>
 
+<!-- JS -->
+<script src="./script.js"></script>
 </body>
 </html>
