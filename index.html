@@ -1,4 +1,3 @@
-<h1 style="color:red; text-align:center;">TEST CHANGE</h1>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,59 +5,21 @@
   <meta charset="UTF-8">
   <title>Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./assets/css/style.css?v=5">
-</head>
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    h2 {
-      text-align: center;
-    }
-    p {
-      text-align: center;
-    }
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .buttons a {
-      display: block;
-      width: 100%;
-      max-width: 320px;
-      text-align: center;
-      padding: 12px;
-      background: #cd2653;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-    nav ol {
-      max-width: 500px;
-      margin: auto;
-    }
-  </style>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css?v=5">
 </head>
 
 <body>
 
 <section>
-  <h1 style="text-align:center;">Home</h1>
-  <p><strong>“Teaching today, transforming tomorrow — one formulation at a time.”</strong></p>
+  <h1 class="has-text-align-center">Home</h1>
 
-  <nav>
+  <p class="has-text-align-center">
+    <strong>“Teaching today, transforming tomorrow — one formulation at a time.”</strong>
+  </p>
+
+  <nav class="wp-block-table-of-contents">
     <ol>
       <li><a href="#pci-syllabus">PCI Syllabus</a></li>
       <li><a href="#notes">Notes</a></li>
@@ -70,11 +31,16 @@
       <li><a href="#subscribe">Subscribe</a></li>
     </ol>
   </nav>
-  <p><strong><em style="color:#cd2653;">Learn without limits:</em></strong></p>
+
+  <p class="has-text-align-center">
+    <strong><em style="color:#cd2653;">Learn without limits:</em></strong>
+  </p>
 </section>
+
 <section id="pci-syllabus">
   <h2>PCI Syllabus</h2>
   <p><strong>To download Syllabus, kindly click on the buttons below 👇</strong></p>
+
   <div class="buttons">
     <a href="https://pci.gov.in/documents/1281/Syllabus_M_Pharm_MTZZgGl.pdf" target="_blank">M. Pharm (PCI)</a>
     <a href="https://pci.gov.in/documents/1277/Syllabus_B_Pharm_Y4DhvIW.pdf" target="_blank">B. Pharm (PCI)</a>
@@ -100,9 +66,12 @@
   <p><strong>For video lectures, subscribe below</strong></p>
 
   <div style="text-align:center;">
-    <iframe width="560" height="315"
+    <iframe
       src="https://www.youtube.com/embed/ehsoqX8hwlc"
-      frameborder="0" allowfullscreen>
+      width="560"
+      height="315"
+      frameborder="0"
+      allowfullscreen>
     </iframe>
   </div>
 </section>
@@ -118,6 +87,7 @@
 
   <p><strong>Note:</strong> You may mail question papers for solutions.</p>
 </section>
+
 <section id="download-notes">
   <h2>Download Notes</h2>
 
@@ -152,8 +122,8 @@
   <h2>Subscribe</h2>
   <p>Enter your email below to receive updates.</p>
 
-  <form style="text-align:center;">
-    <input type="email" placeholder="Enter your email" required />
+  <form class="has-text-align-center">
+    <input type="email" placeholder="Enter your email" required>
     <br><br>
     <button type="submit">Subscribe</button>
   </form>
@@ -161,10 +131,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
