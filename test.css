@@ -183,3 +183,49 @@ a:hover {
     font-size: 1.6rem;
   }
 }
+.notes-section{
+  text-align: center;
+  padding: 60px 20px;
+  background: #f7f1e3;
+}
+
+.notes-section h1{
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subtitle{
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.course-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.course-btn{
+  min-width: 240px;
+  padding: 14px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  background: #c81d4f;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.course-btn:hover{
+  background: #a5163f;
+}
+
+/* Disabled buttons */
+.course-btn.disabled{
+  background: #c81d4f;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
