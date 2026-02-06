@@ -1,21 +1,13 @@
-# PharmaVerse 💊
+# Drugee Edu Portal
 
-A 100% FREE pharmacy education platform for:
-- D.Pharm
-- B.Pharm
-- M.Pharm
-- Pharm.D
-- GPAT & NIPER
+This is a static GitHub Pages version of the Drugee WordPress site.
 
-### Features
-✔ Concept-driven notes  
-✔ Semester-wise syllabus  
-✔ Practical & viva support  
-✔ AI-ready architecture  
-✔ Free forever  
+## How to publish
+1. Upload all files to GitHub repository
+2. Go to Settings → Pages
+3. Select branch: main
+4. Root folder
+5. Save
 
-### Deployment
-Deploy easily on:
-- GitHub Pages
-- Netlify
-- Vercel
+Your site will be live at:
+https://username.github.io/repo-name/
