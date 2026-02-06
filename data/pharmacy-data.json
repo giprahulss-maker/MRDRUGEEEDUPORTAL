@@ -1,0 +1,14 @@
+{
+  "bpharm": {
+    "Semester 1": [
+      "Human Anatomy & Physiology I",
+      "Pharmaceutical Analysis I",
+      "Pharmaceutics I"
+    ],
+    "Semester 2": [
+      "Biochemistry",
+      "Pathophysiology",
+      "Organic Chemistry I"
+    ]
+  }
+}
