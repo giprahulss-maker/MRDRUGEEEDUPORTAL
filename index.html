@@ -1,91 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DRUGEE| Free Pharmacy Education</title>
-<link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <title>Digital Pharmacy University | Free Pharmacy Education</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="navbar">
-
-  <!-- LEFT LINKS -->
-  <nav class="nav-left">
-    <a href="#">Courses</a>
-    <a href="#">Notes</a>
-    <a href="#">Practicals</a>
-  </nav>
-
-  <!-- CENTER LOGO -->
-  <a href="index.html" class="logo-container">
-    <img src="assets/images/logo.png" alt="DRUGEE Logo" class="logo-img">
-    <span class="logo-text">DRUGEE.IN</span>
-  </a>
-
-  <!-- RIGHT LINKS -->
-  <nav class="nav-right">
-    <a href="#">Exams</a>
-    <a href="#">About</a>
-  </nav>
+<!-- HEADER -->
+<header>
+    <h1>Digital Pharmacy University</h1>
+    <p>The Free Pharmacy University on the Internet</p>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>India’s Smartest FREE Pharmacy Learning Platform</h1>
-  <p>D.Pharm • B.Pharm • M.Pharm • Pharm.D • GPAT • NIPER</p>
-  <button>Start Learning Free</button>
+<!-- NAVIGATION -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#notes">Notes</a>
+    <a href="#practicals">Practicals</a>
+    <a href="#animations">Animations</a>
+    <a href="#exams">Exams</a>
+    <a href="#about">About</a>
+</nav>
+
+<!-- SEARCH -->
+<section class="search-section">
+    <input type="text" id="searchBox" placeholder="Search drug, subject, semester...">
 </section>
 
-<!-- FEATURES -->
-<section class="features">
-  <div class="card">
-    <h3>🧠 Concept-Driven Learning</h3>
-    <p>Mechanisms, flowcharts, memory tricks & exam focus.</p>
-  </div>
+<!-- HOME -->
+<section id="home" class="section">
+    <h2>Mission</h2>
+    <p>
+        Education without barriers. A single trusted platform for
+        D.Pharm, B.Pharm, M.Pharm & Pharm.D students.
+    </p>
 
-  <div class="card">
-    <h3>🧪 Practical & Viva Support</h3>
-    <p>Step-wise experiments with viva questions.</p>
-  </div>
+    <div class="cards">
+        <div class="card">📘 Notes</div>
+        <div class="card">🧪 Practicals</div>
+        <div class="card">🎥 Animations</div>
+        <div class="card">📝 Exams</div>
+    </div>
+</section>
 
-  <div class="card">
-    <h3>🤖 AI Pharmacy Assistant</h3>
-    <p>Ask any pharmacy doubt & get instant answers.</p>
-  </div>
+<!-- COURSES -->
+<section id="courses" class="section">
+    <h2>Courses</h2>
+
+    <ul>
+        <li><strong>D.Pharm</strong> – Year 1 & 2</li>
+        <li><strong>B.Pharm</strong> – Semester 1 to 8</li>
+        <li><strong>M.Pharm</strong> – All Specializations</li>
+        <li><strong>Pharm.D</strong> – Academic + Internship</li>
+    </ul>
+</section>
+
+<!-- NOTES -->
+<section id="notes" class="section">
+    <h2>Notes & Study Material</h2>
+    <p>Unit-wise, PCI-aligned, exam-oriented pharmacy notes.</p>
+
+    <div class="content-box">
+        <h3>Example: Pharmacology – ANS</h3>
+        <ul>
+            <li>Parasympathetic drugs</li>
+            <li>Sympathomimetics</li>
+            <li>Cholinergic blockers</li>
+        </ul>
+    </div>
+</section>
+
+<!-- PRACTICALS -->
+<section id="practicals" class="section">
+    <h2>Practicals & Lab Manuals</h2>
+    <p>Step-by-step experiments with viva questions.</p>
+
+    <div class="content-box">
+        <p><strong>Example:</strong> Acetic Acid Induced Writhing Test</p>
+        <ol>
+            <li>Aim</li>
+            <li>Principle</li>
+            <li>Procedure</li>
+            <li>Result</li>
+        </ol>
+    </div>
+</section>
+
+<!-- ANIMATIONS -->
+<section id="animations" class="section">
+    <h2>Visual Learning</h2>
+    <p>Drug mechanisms, physiology & pharmaceutical processes.</p>
+
+    <div class="content-box">
+        <p>🎥 Paracetamol – Mechanism of Action (Coming Soon)</p>
+    </div>
+</section>
+
+<!-- EXAMS -->
+<section id="exams" class="section">
+    <h2>Exam Preparation</h2>
+
+    <ul>
+        <li>GPAT – MCQs & PYQs</li>
+        <li>NIPER – Concept-based questions</li>
+        <li>University Exams – Important questions</li>
+    </ul>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h2>About & Trust</h2>
+    <p>
+        This platform is aligned with PCI syllabus and is
+        permanently free for pharmacy students.
+    </p>
+    <p><strong>No ads. No paywalls. Ever.</strong></p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  © 2026 PharmaVerse • Free Forever for Pharmacy Students
+    <p>© Digital Pharmacy University | Always Free</p>
 </footer>
 
-<!-- AI CHAT BUTTON -->
-<div class="chat-btn" onclick="toggleChat()">💬</div>
-
-<!-- CHAT WINDOW -->
-<div class="chat-box" id="chatBox">
-  <div class="chat-header">
-    Pharma AI Assistant
-    <span onclick="toggleChat()">✖</span>
-  </div>
-
-  <div class="chat-body" id="chatBody">
-    <div class="bot-msg">Hello 👋 Ask me anything about Pharmacy!</div>
-  </div>
-
-  <div class="chat-input">
-    <input type="text" id="userInput" placeholder="Ask your pharmacy question...">
-    <button onclick="sendMessage()">Send</button>
-  </div>
-</div>
-
-<script src="assets/js/main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
