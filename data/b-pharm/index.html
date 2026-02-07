@@ -1,148 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>B.Pharm</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>B.Pharm</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      padding: 40px 20px;
-      background: #f6f0e4;   /* beige theme */
-      color: #000;
-      font-family: Arial, Helvetica, sans-serif;
-      text-align: center;
-    }
+<style>
+body{
+  margin:0;
+  padding:40px 20px;
+  background:#f6f0e4;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align:center;
+}
+h1{font-size:34px;}
+h2{margin:30px 0 15px;}
+.quick-links a{margin:0 6px;font-size:13px;color:#0000ee;}
+.sep{margin:25px 0;font-size:18px;}
 
-    h1 {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
+.subjects{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+}
+.subject-btn{
+  background:#c4002f;
+  color:#fff;
+  padding:10px 14px;
+  font-size:13px;
+  font-weight:600;
+  border-radius:4px;
+  cursor:pointer;
+  border:none;
+}
+.subject-btn:hover{background:#9b0024;}
 
-    /* Top semester links */
-    .quick-links {
-      font-size: 13px;
-      margin-bottom: 15px;
-    }
-
-    .quick-links a {
-      display: inline-block;
-      margin: 2px 4px;
-      color: #0000ee;
-      text-decoration: underline;
-    }
-
-    /* // separator */
-    .separator {
-      margin: 20px 0;
-      font-size: 18px;
-    }
-
-    h2 {
-      margin: 25px 0 12px;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    /* Subject buttons */
-    .subjects {
-      max-width: 950px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 6px;
-    }
-
-    .subjects a {
-      background: #c4002f;   /* RED */
-      color: #fff;
-      padding: 6px 10px;
-      font-size: 12px;
-      text-decoration: none;
-      border-radius: 2px;
-      white-space: nowrap;
-    }
-
-    .subjects a:hover {
-      opacity: 0.85;
-    }
-  </style>
+#page{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#f6f0e4;
+  overflow:auto;
+  padding:40px;
+  text-align:left;
+}
+.page-box{
+  max-width:1000px;
+  margin:auto;
+}
+.back{
+  cursor:pointer;
+  color:#0000ee;
+  margin-bottom:20px;
+  display:inline-block;
+}
+.page-box h1{color:#c4002f;}
+</style>
 </head>
 
 <body>
 
+<div id="home">
 <h1>B.Pharm</h1>
 
 <div class="quick-links">
-  <a href="#i-semester">I - Semester</a>
-  <a href="#ii-semester">II - Semester</a>
-  <a href="#iii-semester">III - Semester</a>
-  <a href="#iv-semester">IV - Semester</a>
-  <a href="#v-semester">V - Semester</a>
-  <a href="#vi-semester">VI - Semester</a>
-  <a href="#vii-semester">VII - Semester</a>
-  <a href="#viii-semester">VIII - Semester</a>
+<a href="#i">I</a><a href="#ii">II</a><a href="#iii">III</a><a href="#iv">IV</a>
+<a href="#v">V</a><a href="#vi">VI</a><a href="#vii">VII</a><a href="#viii">VIII</a>
 </div>
 
-<div class="separator">//</div>
+<div class="sep">//</div>
 
-<!-- I SEM -->
-<section id="i-semester">
-  <h2>I - Semester</h2>
-  <div class="subjects">
-    <a>HUMAN ANATOMY AND PHYSIOLOGY I (BP101T)</a>
-    <a>PHARMACEUTICAL ANALYSIS I (BP102T)</a>
-    <a>PHARMACEUTICS I (BP103T)</a>
-    <a>PHARMACEUTICAL INORGANIC CHEMISTRY (BP104T)</a>
-    <a>COMMUNICATION SKILLS (BP105T)</a>
-    <a>REMEDIAL BIOLOGY (BP106RBT)</a>
-    <a>REMEDIAL MATHEMATICS (BP106RMT)</a>
+<!-- I -->
+<section id="i"><h2>I – Semester</h2><div class="subjects">
+<button class="subject-btn" onclick="openPage('BP101T','Human Anatomy & Physiology I')">HUMAN ANATOMY AND PHYSIOLOGY I (BP101T)</button>
+<button class="subject-btn" onclick="openPage('BP102T','Pharmaceutical Analysis I')">PHARMACEUTICAL ANALYSIS I (BP102T)</button>
+<button class="subject-btn" onclick="openPage('BP103T','Pharmaceutics I')">PHARMACEUTICS I (BP103T)</button>
+<button class="subject-btn" onclick="openPage('BP104T','Pharmaceutical Inorganic Chemistry')">PHARMACEUTICAL INORGANIC CHEMISTRY (BP104T)</button>
+<button class="subject-btn" onclick="openPage('BP105T','Communication Skills')">COMMUNICATION SKILLS (BP105T)</button>
+<button class="subject-btn" onclick="openPage('BP106RBT','Remedial Biology')">REMEDIAL BIOLOGY (BP106RBT)</button>
+<button class="subject-btn" onclick="openPage('BP106RMT','Remedial Mathematics')">REMEDIAL MATHEMATICS (BP106RMT)</button>
+</div></section>
+
+<div class="sep">//</div>
+
+<!-- II -->
+<section id="ii"><h2>II – Semester</h2><div class="subjects">
+<button class="subject-btn" onclick="openPage('BP201T','Human Anatomy & Physiology II')">HUMAN ANATOMY AND PHYSIOLOGY II (BP201T)</button>
+<button class="subject-btn" onclick="openPage('BP202T','Pharmaceutical Organic Chemistry I')">PHARMACEUTICAL ORGANIC CHEMISTRY I (BP202T)</button>
+<button class="subject-btn" onclick="openPage('BP203T','Biochemistry')">BIOCHEMISTRY (BP203T)</button>
+<button class="subject-btn" onclick="openPage('BP204T','Pathophysiology')">PATHOPHYSIOLOGY (BP204T)</button>
+<button class="subject-btn" onclick="openPage('BP205T','Computer Applications in Pharmacy')">COMPUTER APPLICATIONS IN PHARMACY (BP205T)</button>
+<button class="subject-btn" onclick="openPage('BP206T','Environmental Sciences')">ENVIRONMENTAL SCIENCES (BP206T)</button>
+</div></section>
+
+<div class="sep">//</div>
+
+<!-- III -->
+<section id="iii"><h2>III – Semester</h2><div class="subjects">
+<button class="subject-btn" onclick="openPage('BP301T','Pharmaceutical Organic Chemistry II')">PHARMACEUTICAL ORGANIC CHEMISTRY II (BP301T)</button>
+<button class="subject-btn" onclick="openPage('BP302T','Physical Pharmaceutics I')">PHYSICAL PHARMACEUTICS I (BP302T)</button>
+<button class="subject-btn" onclick="openPage('BP303T','Pharmaceutical Microbiology')">PHARMACEUTICAL MICROBIOLOGY (BP303T)</button>
+<button class="subject-btn" onclick="openPage('BP304T','Pharmaceutical Engineering')">PHARMACEUTICAL ENGINEERING (BP304T)</button>
+</div></section>
+
+<div class="sep">//</div>
+
+<!-- IV -->
+<section id="iv"><h2>IV – Semester</h2><div class="subjects">
+<button class="subject-btn" onclick="openPage('BP401T','Pharmaceutical Organic Chemistry III')">PHARMACEUTICAL ORGANIC CHEMISTRY III (BP401T)</button>
+<button class="subject-btn" onclick="openPage('BP402T','Medicinal Chemistry I')">MEDICINAL CHEMISTRY I (BP402T)</button>
+<button class="subject-btn" onclick="openPage('BP403T','Physical Pharmaceutics II')">PHYSICAL PHARMACEUTICS II (BP403T)</button>
+<button class="subject-btn" onclick="openPage('BP404T','Pharmacology I')">PHARMACOLOGY I (BP404T)</button>
+<button class="subject-btn" onclick="openPage('BP405T','Pharmacognosy & Phytochemistry I')">PHARMACOGNOSY & PHYTOCHEMISTRY I (BP405T)</button>
+</div></section>
+
+<div class="sep">//</div>
+
+<!-- V -->
+<section id="v"><h2>V – Semester</h2><div class="subjects">
+<button class="subject-btn" onclick="openPage('BP501T','Medicinal Chemistry II')">MEDICINAL CHEMISTRY II (BP501T)</button>
+<button class="subject-btn" onclick="openPage('BP502T','Industrial Pharmacy I')">INDUSTRIAL PHARMACY I (BP502T)</button>
+<button class="subject-btn" onclick="openPage('BP503T','Pharmacology II')">PHARMACOLOGY II (BP503T)</button>
+<button class="subject-btn" onclick="openPage('BP504T','Pharmacognosy & Phytochemistry II')">PHARMACOGNOSY & PHYTOCHEMISTRY II (BP504T)</button>
+<button class="subject-btn" onclick="openPage('BP505T','Pharmaceutical Jurisprudence')">PHARMACEUTICAL JURISPRUDENCE (BP505T)</button>
+</div></section>
+
+<div class="sep">//</div>
+
+<!-- VI -->
+<section id="vi"><h2>VI – Semester</h2><div class="subjects">
+<button class="subject-btn" onclick="openPage('BP601T','Medicinal Chemistry III')">MEDICINAL CHEMISTRY III (BP601T)</button>
+<button class="subject-btn" onclick="openPage('BP602T','Pharmacology III')">PHARMACOLOGY III (BP602T)</button>
+<button class="subject-btn" onclick="openPage('BP603T','Herbal Drug Technology')">HERBAL DRUG TECHNOLOGY (BP603T)</button>
+<button class="subject-btn" onclick="openPage('BP604T','Biopharmaceutics & Pharmacokinetics')">BIOPHARMACEUTICS & PHARMACOKINETICS (BP604T)</button>
+<button class="subject-btn" onclick="openPage('BP605T','Pharmaceutical Biotechnology')">PHARMACEUTICAL BIOTECHNOLOGY (BP605T)</button>
+<button class="subject-btn" onclick="openPage('BP606T','Quality Assurance')">QUALITY ASSURANCE (BP606T)</button>
+</div></section>
+
+<div class="sep">//</div>
+
+<!-- VII -->
+<section id="vii"><h2>VII – Semester</h2><div class="subjects">
+<button class="subject-btn" onclick="openPage('BP701T','Instrumental Methods of Analysis')">INSTRUMENTAL METHODS OF ANALYSIS (BP701T)</button>
+<button class="subject-btn" onclick="openPage('BP702T','Industrial Pharmacy II')">INDUSTRIAL PHARMACY II (BP702T)</button>
+<button class="subject-btn" onclick="openPage('BP703T','Pharmacy Practice')">PHARMACY PRACTICE (BP703T)</button>
+<button class="subject-btn" onclick="openPage('BP704T','Novel Drug Delivery System')">NOVEL DRUG DELIVERY SYSTEM (BP704T)</button>
+</div></section>
+
+<div class="sep">//</div>
+
+<!-- VIII -->
+<section id="viii"><h2>VIII – Semester</h2><div class="subjects">
+<button class="subject-btn" onclick="openPage('BP801T','Biostatistics & Research Methodology')">BIOSTATISTICS & RESEARCH METHODOLOGY (BP801T)</button>
+<button class="subject-btn" onclick="openPage('BP802T','Social & Preventive Pharmacy')">SOCIAL & PREVENTIVE PHARMACY (BP802T)</button>
+<button class="subject-btn" onclick="openPage('BP803ET','Pharma Marketing Management')">PHARMA MARKETING MANAGEMENT (BP803ET)</button>
+<button class="subject-btn" onclick="openPage('BP804ET','Pharmaceutical Regulatory Science')">PHARMACEUTICAL REGULATORY SCIENCE (BP804ET)</button>
+<button class="subject-btn" onclick="openPage('BP805ET','Pharmacovigilance')">PHARMACOVIGILANCE (BP805ET)</button>
+<button class="subject-btn" onclick="openPage('BP806ET','Quality Control of Herbals')">QUALITY CONTROL OF HERBALS (BP806ET)</button>
+<button class="subject-btn" onclick="openPage('BP807ET','Computer Aided Drug Design')">COMPUTER AIDED DRUG DESIGN (BP807ET)</button>
+<button class="subject-btn" onclick="openPage('BP808ET','Cell & Molecular Biology')">CELL & MOLECULAR BIOLOGY (BP808ET)</button>
+<button class="subject-btn" onclick="openPage('BP809ET','Cosmetic Science')">COSMETIC SCIENCE (BP809ET)</button>
+<button class="subject-btn" onclick="openPage('BP810ET','Experimental Pharmacology')">EXPERIMENTAL PHARMACOLOGY (BP810ET)</button>
+<button class="subject-btn" onclick="openPage('BP811ET','Advanced Instrumentation Techniques')">ADVANCED INSTRUMENTATION TECHNIQUES (BP811ET)</button>
+<button class="subject-btn" onclick="openPage('BP812ET','Dietary Supplements & Nutraceuticals')">DIETARY SUPPLEMENTS & NUTRACEUTICALS (BP812ET)</button>
+</div></section>
+
+</div>
+
+<!-- FULL PAGE VIEW -->
+<div id="page">
+  <div class="page-box">
+    <span class="back" onclick="closePage()">← Back to B.Pharm</span>
+    <h1 id="page-title"></h1>
+    <p><strong>Subject Code:</strong> <span id="page-code"></span></p>
+    <p>Add syllabus, notes, PDFs, PYQs here.</p>
   </div>
-</section>
+</div>
 
-<div class="separator">//</div>
-
-<!-- II SEM -->
-<section id="ii-semester">
-  <h2>II - Semester</h2>
-  <div class="subjects">
-    <a>HUMAN ANATOMY AND PHYSIOLOGY II (BP201T)</a>
-    <a>PHARMACEUTICAL ORGANIC CHEMISTRY I (BP202T)</a>
-    <a>BIOCHEMISTRY (BP203T)</a>
-    <a>PATHOPHYSIOLOGY (BP204T)</a>
-    <a>COMPUTER APPLICATIONS IN PHARMACY (BP205T)</a>
-    <a>ENVIRONMENTAL SCIENCES (BP206T)</a>
-  </div>
-</section>
-
-<div class="separator">//</div>
-
-<!-- III SEM -->
-<section id="iii-semester">
-  <h2>III - Semester</h2>
-  <div class="subjects">
-    <a>PHARMACEUTICAL ORGANIC CHEMISTRY II (BP301T)</a>
-    <a>PHYSICAL PHARMACEUTICS I (BP302T)</a>
-    <a>PHARMACEUTICAL MICROBIOLOGY (BP303T)</a>
-    <a>PHARMACEUTICAL ENGINEERING (BP304T)</a>
-  </div>
-</section>
-
-<div class="separator">//</div>
-
-<!-- IV SEM -->
-<section id="iv-semester">
-  <h2>IV - Semester</h2>
-  <div class="subjects">
-    <a>PHARMACEUTICAL ORGANIC CHEMISTRY III (BP401T)</a>
-    <a>MEDICINAL CHEMISTRY I (BP402T)</a>
-    <a>PHYSICAL PHARMACEUTICS II (BP403T)</a>
-    <a>PHARMACOLOGY I (BP404T)</a>
-    <a>PHARMACOGNOSY & PHYTOCHEMISTRY I (BP405T)</a>
-  </div>
-</section>
+<script>
+function openPage(code,title){
+  document.getElementById("home").style.display="none";
+  document.getElementById("page").style.display="block";
+  document.getElementById("page-title").innerText=title;
+  document.getElementById("page-code").innerText=code;
+}
+function closePage(){
+  document.getElementById("page").style.display="none";
+  document.getElementById("home").style.display="block";
+}
+</script>
 
 </body>
 </html>
