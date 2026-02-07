@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>D.Pharm (ER-2020)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  padding:40px 20px;
+  background:#f6f0e4;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align:center;
+}
+h1{font-size:34px;}
+h2{margin:30px 0 15px;}
+.sep{margin:25px 0;font-size:18px;}
+
+.subjects{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+}
+.subject-btn{
+  background:#c4002f;
+  color:#fff;
+  padding:10px 14px;
+  font-size:13px;
+  font-weight:600;
+  border-radius:4px;
+  cursor:pointer;
+  border:none;
+}
+.subject-btn:hover{
+  background:#9b0024;
+}
+
+/* full page view */
+#page{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#f6f0e4;
+  overflow:auto;
+  padding:40px;
+  text-align:left;
+}
+.page-box{
+  max-width:1000px;
+  margin:auto;
+}
+.back{
+  cursor:pointer;
+  color:#0000ee;
+  margin-bottom:20px;
+  display:inline-block;
+}
+.page-box h1{
+  color:#c4002f;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HOME ================= -->
+<div id="home">
+
+<h1>D.Pharm (ER-2020)</h1>
+<p>Subject-wise Notes & Resources</p>
+
+<div class="sep">//</div>
+
+<!-- ================= 1st YEAR ================= -->
+<h2>D.Pharm – First Year</h2>
+<div class="subjects">
+  <button class="subject-btn" onclick="openPage('DP101','Pharmaceutics I')">
+    PHARMACEUTICS I
+  </button>
+  <button class="subject-btn" onclick="openPage('DP102','Pharmaceutical Chemistry I')">
+    PHARMACEUTICAL CHEMISTRY I
+  </button>
+  <button class="subject-btn" onclick="openPage('DP103','Pharmacognosy')">
+    PHARMACOGNOSY
+  </button>
+  <button class="subject-btn" onclick="openPage('DP104','Biochemistry & Clinical Pathology')">
+    BIOCHEMISTRY & CLINICAL PATHOLOGY
+  </button>
+  <button class="subject-btn" onclick="openPage('DP105','Human Anatomy & Physiology')">
+    HUMAN ANATOMY & PHYSIOLOGY
+  </button>
+  <button class="subject-btn" onclick="openPage('DP106','Health Education & Community Pharmacy')">
+    HEALTH EDUCATION & COMMUNITY PHARMACY
+  </button>
+</div>
+
+<div class="sep">//</div>
+
+<!-- ================= 2nd YEAR ================= -->
+<h2>D.Pharm – Second Year</h2>
+<div class="subjects">
+  <button class="subject-btn" onclick="openPage('DP201','Pharmaceutics II')">
+    PHARMACEUTICS II
+  </button>
+  <button class="subject-btn" onclick="openPage('DP202','Pharmaceutical Chemistry II')">
+    PHARMACEUTICAL CHEMISTRY II
+  </button>
+  <button class="subject-btn" onclick="openPage('DP203','Pharmacology & Toxicology')">
+    PHARMACOLOGY & TOXICOLOGY
+  </button>
+  <button class="subject-btn" onclick="openPage('DP204','Pharmaceutical Jurisprudence')">
+    PHARMACEUTICAL JURISPRUDENCE
+  </button>
+  <button class="subject-btn" onclick="openPage('DP205','Drug Store & Business Management')">
+    DRUG STORE & BUSINESS MANAGEMENT
+  </button>
+  <button class="subject-btn" onclick="openPage('DP206','Hospital & Clinical Pharmacy')">
+    HOSPITAL & CLINICAL PHARMACY
+  </button>
+</div>
+
+</div>
+
+<!-- ================= FULL PAGE VIEW ================= -->
+<div id="page">
+  <div class="page-box">
+    <span class="back" onclick="closePage()">← Back to D.Pharm</span>
+
+    <h1 id="page-title"></h1>
+    <p><strong>Subject Code:</strong> <span id="page-code"></span></p>
+
+    <h3>Syllabus (ER-2020)</h3>
+    <p>Add unit-wise syllabus here.</p>
+
+    <h3>Notes / PDFs</h3>
+    <p>Add downloadable notes here.</p>
+
+    <h3>Previous Year Questions</h3>
+    <p>Add PYQs here.</p>
+  </div>
+</div>
+
+<script>
+function openPage(code,title){
+  document.getElementById("home").style.display="none";
+  document.getElementById("page").style.display="block";
+  document.getElementById("page-title").innerText=title;
+  document.getElementById("page-code").innerText=code;
+}
+function closePage(){
+  document.getElementById("page").style.display="none";
+  document.getElementById("home").style.display="block";
+}
+</script>
+
+</body>
+</html>
