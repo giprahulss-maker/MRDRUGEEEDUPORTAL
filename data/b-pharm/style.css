@@ -1,0 +1,62 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #ffffff;
+  color: #111;
+}
+
+h2 {
+  text-align: center;
+  margin: 30px 0 20px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 40px 0;
+}
+
+.toc {
+  max-width: 900px;
+  margin: auto;
+}
+
+.toc ol {
+  padding-left: 20px;
+}
+
+.toc a {
+  text-decoration: none;
+  color: #0073aa;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.buttons a {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.buttons a:hover {
+  background: #0073aa;
+  color: #fff;
+  border-color: #0073aa;
+}
