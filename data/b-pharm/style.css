@@ -1,99 +1,69 @@
 * {
   box-sizing: border-box;
-  font-family: "Segoe UI", system-ui, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
   margin: 0;
-  background: #f4f6fb;
-  color: #1f2937;
-}
-
-header {
+  padding: 40px 20px;
+  background: #f6f0e4;   /* beige background */
+  color: #000;
   text-align: center;
-  padding: 2.5rem 1rem;
-  background: linear-gradient(135deg, #4f46e5, #6366f1);
-  color: white;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.2rem;
+/* Main title */
+.title {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
-header p {
-  opacity: 0.9;
+/* Quick semester links */
+.quick-links {
+  font-size: 13px;
+  line-height: 1.6;
 }
 
-.toc {
-  position: sticky;
-  top: 0;
-  background: white;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0.7rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  z-index: 10;
+.quick-links a {
+  display: block;
+  color: #c40000;
+  text-decoration: underline;
+  margin: 2px 0;
 }
 
-.toc a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #4f46e5;
+/* Section headings */
+h2 {
+  margin: 30px 0 15px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.stack {
-  max-width: 1100px;
-  margin: 2.5rem auto;
-  padding: 0 1rem;
-  display: grid;
-  gap: 2.2rem;
+/* Separator // */
+.separator {
+  margin: 25px 0;
+  font-size: 18px;
 }
 
-.card {
-  background: white;
-  border-radius: 18px;
-  padding: 2rem;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-.card h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #4338ca;
-}
-
+/* Subject buttons */
 .subjects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .subjects a {
-  padding: 0.9rem 1rem;
-  background: #eef2ff;
-  border-radius: 12px;
+  background: #c4002f;   /* red buttons */
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 12px;
   text-decoration: none;
-  color: #1e3a8a;
-  font-weight: 500;
-  text-align: center;
-  transition: all 0.2s ease;
+  border-radius: 2px;
+  white-space: nowrap;
 }
 
+/* Hover kept minimal */
 .subjects a:hover {
-  background: #4f46e5;
-  color: white;
-  transform: scale(1.03);
-}
-
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  color: #6b7280;
+  opacity: 0.85;
 }
